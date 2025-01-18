@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ml-frontend-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ml-frontend
+  template:
+    metadata:
+      labels:
+        app: ml-frontend
+    spec:
+      containers:
+      - name: ml-frontend
+        image: parvg/ml-frontend:latest
+        ports:
+        - containerPort: 80
