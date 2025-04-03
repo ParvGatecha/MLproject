@@ -36,6 +36,7 @@ pipeline {
                         sh 'kubectl apply -f ./kubernetes/backend-service.yaml'
                         sh 'kubectl apply -f ./kubernetes/frontend-deployment.yaml'
                         sh 'kubectl apply -f ./kubernetes/frontend-service.yaml'
+                        sh 'kubectl get pods'
                 }
             }
         }
